@@ -24,6 +24,11 @@
 
 * { box-sizing: border-box; margin: 0; padding: 0; }
 
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 90px;
+}
+
 body {
     background-color: var(--bg);
     color: var(--text);
@@ -49,12 +54,50 @@ nav {
     top: 0; left: 0; right: 0;
     padding: 1.5rem 2rem;
     display: flex;
-    justify-content: flex-end;
-    gap: 20px;
+    justify-content: space-between;
+    align-items: center;
     z-index: 100;
     background: transparent;
     transition: all 0.3s ease;
     border-bottom: 1px solid transparent;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+}
+
+.nav-anchor {
+    font-size: 0.85rem;
+    font-weight: 800;
+    text-transform: uppercase;
+    color: var(--text);
+    text-decoration: none;
+    letter-spacing: 0.1rem;
+    transition: color 0.3s ease;
+    border: none !important;
+}
+
+.nav-anchor:hover {
+    color: var(--pink) !important;
+    border-color: transparent !important;
+    background: transparent !important;
+}
+
+.nav-controls {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+@media (max-width: 900px) {
+    nav {
+        padding: 1rem 1.5rem;
+        justify-content: flex-end;
+    }
+    .nav-links, .nav-branding {
+        display: none;
+    }
 }
 
 nav.scrolled {
@@ -94,17 +137,7 @@ nav button:hover, nav a:hover {
     color: var(--pink);
 }
 
-/* --- ANIMATIONS --- */
-.fade-up {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.fade-up.in-view {
-    opacity: 1;
-    transform: translateY(0);
-}
+/* --- ANIMATIONS REMOVED --- */
 
 /* --- SECTION 1 : HERO --- */
 header#hero {
@@ -168,6 +201,14 @@ header#hero {
     line-height: 1;
     margin-bottom: 1rem;
     text-shadow: 0 4px 40px rgba(0, 0, 0, 0.4);
+}
+
+.hero-title {
+    font-size: clamp(2.5rem, 5vw, 5rem);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 1.5rem;
+    text-transform: uppercase;
 }
 
 .hero-subtitle {
@@ -240,6 +281,14 @@ header#hero {
     flex-direction: column;
 }
 
+.stat-impact .vintage-icon {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 12px;
+    color: var(--pink);
+    stroke-width: 1.5px;
+}
+
 .stat-impact .value {
     font-size: clamp(2rem, 5vw, 3.5rem);
     font-weight: 800;
@@ -278,7 +327,8 @@ header#hero {
 
 @media (max-width: 900px) {
     .manifesto-grid {
-        grid-template-columns: 1fr;
+        display: flex;
+        flex-direction: column-reverse;
         gap: 3rem;
     }
 }
@@ -397,22 +447,6 @@ h2 {
     height: 480px;
 }
 
-.strava-wrapper {
-    height: 480px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background: var(--setup-bg);
-    border: 1px solid var(--border);
-    border-radius: 12px;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.strava-wrapper:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 15px 30px rgba(0,0,0,0.2);
-}
-
 .iframe-wrapper iframe {
     width: 100%;
     height: 100%;
@@ -424,8 +458,60 @@ h2 {
     box-shadow: 0 15px 30px rgba(0,0,0,0.2);
 }
 
+.journal-cms-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .journal-cms-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+.journal-card {
+    background: var(--setup-bg);
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    padding: 2rem;
+    text-decoration: none;
+    color: var(--text);
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    transition: transform 0.3s ease, border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.journal-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--pink);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.1);
+}
+
+.journal-day {
+    font-size: 0.85rem;
+    color: var(--pink);
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 0.1rem;
+}
+
+.journal-card h4 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+}
+
+.journal-link {
+    font-size: 0.9rem;
+    color: var(--text-dim);
+    margin-top: auto;
+    padding-top: 1rem;
+}
+
 @media (max-width: 768px) {
-    .iframe-wrapper.komoot-wrapper, .iframe-wrapper.polarsteps-wrapper, .strava-wrapper {
+    .iframe-wrapper.komoot-wrapper, .iframe-wrapper.polarsteps-wrapper {
         height: auto;
         min-height: 460px;
     }

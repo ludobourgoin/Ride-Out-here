@@ -33,23 +33,4 @@ document.addEventListener('DOMContentLoaded', () => {
             nav.classList.remove('scrolled');
         }
     });
-
-    // --- SCROLL REVEAL ANIMATIONS (Fade Up) ---
-    const observerOptions = {
-        root: null,
-        rootMargin: '0px',
-        threshold: 0.1
-    };
-
-    const observer = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
-            if (entry.isIntersecting) {
-                entry.target.classList.add('in-view');
-                observer.unobserve(entry.target);
-            }
-        });
-    }, observerOptions);
-
-    const revealElements = document.querySelectorAll('.fade-up');
-    revealElements.forEach(el => observer.observe(el));
 });

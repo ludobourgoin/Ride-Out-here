@@ -13,46 +13,61 @@
 <body>
 
     <nav aria-label="Main Navigation">
-        <button id="theme-toggle" aria-label="Basculer le thème">☀️ Light</button>
-        <a href="index.html" class="active-lang">FR</a>
-        <a href="en.html">EN</a>
+        <div class="nav-branding">
+            <a href="#hero" style="font-family: 'Yellowtail', cursive; font-size: 1.8rem; line-height: 1; color: var(--text); text-decoration: none;">Ride Out Here</a>
+        </div>
+        <div class="nav-links">
+            <a href="#manifesto" class="nav-anchor">Manifesto</a>
+            <a href="#playground" class="nav-anchor">Le Tracé</a>
+            <a href="#destination" class="nav-anchor">L'Arrivée</a>
+        </div>
+        <div class="nav-controls">
+            <button id="theme-toggle" aria-label="Basculer le thème">☀️ Light</button>
+            <a href="index.html" class="active-lang">FR</a>
+            <a href="en.html">EN</a>
+        </div>
     </nav>
 
     <!-- SECTION 1 : HERO -->
-    <header id="hero" class="fade-up">
+    <header id="hero">
         <div class="hero-main">
             <div class="hero-content">
                 <div class="kicker">Sète ➔ Dorset · 12 Juil – 07 Août 2026</div>
-                <h1 class="logo-script" style="color: var(--text);">Ride Out Here</h1>
-                <div class="hero-subtitle">1 300km vers le silence.<br>Une traversée de la France en solo par les chemins de traverse. De la Méditerranée aux volcans, jusqu'à la côte sauvage anglaise. Zéro carbone, 100% acide lactique.</div>
+                <h1 class="hero-title">1 000 km jusqu'au<br><span style="color: var(--pink)">Dancefloor.</span></h1>
+                <div class="hero-subtitle">Une traversée en VTT en solo depuis Sète jusqu'aux bois luxuriants du Dorset, au Royaume-Uni. 20 jours de camping sauvage, de voyage lent, et d'anticipation grandissante pour We Out Here.</div>
+                <a href="#playground" class="app-link" style="margin-top: 1.5rem;">Découvrir l'itinéraire</a>
             </div>
             
             <div class="hero-visual">
-                <div class="placeholder-img">
+                <div class="placeholder-img" role="img" aria-label="Ludo avec son VTT chargé, prêt à partir de la côte sud de la France.">
                     <div>
                         <div class="placeholder-text">Espace Photo</div>
-                        <div class="placeholder-sub">Ton meilleur sourire sur le vélo pour sublimer l'en-tête de ton site !</div>
+                        <div class="placeholder-sub">Ludo avec son VTT chargé, prêt à partir de la côte sud de la France.</div>
                     </div>
                 </div>
             </div>
         </div>
         
-        <div class="hero-stats fade-up">
+        <div class="hero-stats">
             <div class="stat-impact">
-                <span class="value">1300</span>
-                <span class="label">Kilomètres</span>
+                <svg class="vintage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="6" cy="19" r="3"></circle><path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"></path><circle cx="18" cy="5" r="3"></circle></svg>
+                <span class="value">1000</span>
+                <span class="label">km parcourus</span>
             </div>
             <div class="stat-impact">
-                <span class="value">+17k</span>
-                <span class="label">Mètres D+</span>
+                <svg class="vintage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect><line x1="16" y1="2" x2="16" y2="6"></line><line x1="8" y1="2" x2="8" y2="6"></line><line x1="3" y1="10" x2="21" y2="10"></line></svg>
+                <span class="value">20</span>
+                <span class="label">jours en pleine nature</span>
             </div>
             <div class="stat-impact">
+                <svg class="vintage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><circle cx="12" cy="7" r="4"></circle><path d="M5.5 21v-2a4 4 0 0 1 4-4h5a4 4 0 0 1 4 4v2"></path></svg>
                 <span class="value">1</span>
-                <span class="label">Vélo Gravel</span>
+                <span class="label">mission en solo</span>
             </div>
             <div class="stat-impact">
-                <span class="value">21</span>
-                <span class="label">Jours</span>
+                <svg class="vintage-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                <span class="value">1</span>
+                <span class="label">week-end inoubliable</span>
             </div>
         </div>
     </header>
@@ -60,16 +75,15 @@
     <!-- SECTION 2 : MANIFESTO -->
     <section id="manifesto" class="container">
         <div class="manifesto-grid">
-            <div class="manifesto-left fade-up">
-                <h2>L'éloge de la lenteur et du bivouac.</h2>
+            <div class="manifesto-left">
+                <h2>Troquer les écrans contre la selle.</h2>
                 <div class="manifesto-quote">
-                    "Dans la vie, il faut trois ingrédients : du soleil, un point de vue, et dans les jambes la mémoire lactique de l'effort."
-                    <br>— Sylvain Tesson
+                    "Coder le matin. Pédaler l'après-midi. Danser sur la ligne d'arrivée."
                 </div>
             </div>
-            <div class="manifesto-right fade-up">
-                <p>Prendre le temps. Lire pieds nus dans l'herbe fraîche près d'une écluse. Ce voyage est une quête de liberté totale, guidée par le camping sauvage et le refus de la facilité.</p>
-                <p>Partir à l'aventure sans émettre de CO2, pour prouver qu'on n'a pas besoin de traverser le globe en avion pour se sentir vivant, tout simplement en reconnectant le corps et l'esprit à l'effort pur.</p>
+            <div class="manifesto-right">
+                <p>En tant que développeur web freelance, ma vie tourne autour du code et des livraisons numériques à un rythme effréné. Ce mois d'août, je me déconnecte et je prends le chemin le plus long.</p>
+                <p>Traverser la France en VTT n'est pas seulement un défi physique ; c'est le choix d'un voyage lent et décarboné. C'est le fait de mériter sa destination.</p>
             </div>
         </div>
     </section>
@@ -81,16 +95,16 @@
             <span class="badge">Setup Bivouac</span>
             <span class="badge">Gravel Bike</span>
         </div>
-        <div class="container fade-up">
+        <div class="container">
             <div class="playground-header">
-                <h2>Oublier le bitume.<br><span style="color: var(--pink)">Chercher la minéralité.</span></h2>
-                <p>Pourquoi la diagonale des volcans ? Parce que le Gravel est un jeu. C'est l'inconnu, la nature brute, loin des vallées plates. C'est un tracé exigeant où chaque mètre de dénivelé positif se mérite.</p>
+                <h2>À travers le cœur <br><span style="color: var(--pink)">du pays.</span></h2>
+                <p>Aucun véhicule d'assistance. Juste une tente, un VTT taillé pour les sentiers accidentés, et une ligne sur une carte. Des vallées profondes du Massif Central français au ferry de Portsmouth, chaque coup de pédale me rapproche de Wimborne St Giles.</p>
             </div>
             
             <div class="data-grid">
                 
                 <!-- KOMOOT FULL WIDTH -->
-                <div class="data-item full-width fade-up">
+                <div class="data-item full-width">
                     <div class="data-header">
                         <h3>Le Tracé Brut</h3>
                         <p class="data-desc">Carte interactive du parcours. Zoomez pour explorer le dénivelé, le type de terrain et les étapes prévues.</p>
@@ -101,41 +115,32 @@
                     <div class="app-link-container">
                         <a href="https://www.komoot.com/fr-fr/collection/4285961" target="_blank" class="app-link">
                             <img src="Komoot_idVKN6jqin_1.svg" alt="Komoot" class="app-logo">
-                            Ouvrir Komoot
+                            Explorer le tracé
                         </a>
                     </div>
                 </div>
 
-                <!-- POLARSTEPS HALF WIDTH -->
-                <div class="data-item fade-up">
+                <!-- JOURNAL GRID (Simulated CMS) -->
+                <div class="data-item full-width fade-up" style="margin-top: 2rem;">
                     <div class="data-header">
-                        <h3>Journal de bord Live</h3>
-                        <p class="data-desc">Suivi GPS en temps réel et photos. Vivez l'aventure de l'intérieur chaque jour.</p>
+                        <h3>Le Journal de l'Aventure</h3>
+                        <p class="data-desc">Chroniques quotidiennes et statistiques. Les étapes détaillées seront publiées ici chaque jour.</p>
                     </div>
-                    <div class="iframe-wrapper polarsteps-wrapper">
-                        <iframe width="100%" height="100%" src="https://www.polarsteps.com/LudovicBourgoin/25395523-ride-out-here/embed" frameborder="0"></iframe>
-                    </div>
-                    <div class="app-link-container">
-                        <a href="https://www.polarsteps.com/LudovicBourgoin/25395523-ride-out-here" target="_blank" class="app-link">
-                            <img src="Polarsteps_Polarsteps_logo_-_Monotone_-_White_0.svg" alt="Polarsteps" class="app-logo">
-                            Ouvrir Polarsteps
+                    <div class="journal-cms-grid">
+                        <a href="#" class="journal-card">
+                            <span class="journal-day">Jour 1</span>
+                            <h4>Le Départ : Sète ➔ Millau</h4>
+                            <span class="journal-link">Voir l'étape ➔</span>
                         </a>
-                    </div>
-                </div>
-                
-                <!-- STRAVA HALF WIDTH -->
-                <div class="data-item fade-up">
-                    <div class="data-header">
-                        <h3>Télémétrie Strava</h3>
-                        <p class="data-desc">Données brutes de l'effort : fréquence cardiaque, vitesse, puissance et segments.</p>
-                    </div>
-                    <div class="strava-wrapper">
-                        <iframe height='454' width='300' frameborder='0' allowtransparency='true' scrolling='no' src='https://www.strava.com/athletes/3529991/latest-rides/a2a5da579c4d61aae8dc96df157a29bcff467240'></iframe>
-                    </div>
-                    <div class="app-link-container">
-                        <a href="https://www.strava.com/athletes/3529991" target="_blank" class="app-link">
-                            <img src="Strava_idOGsGeeO9_0.svg" alt="Strava" class="app-logo">
-                            Ouvrir Strava
+                        <a href="#" class="journal-card">
+                            <span class="journal-day">Jour 2</span>
+                            <h4>Ascension du Massif Central</h4>
+                            <span class="journal-link">Voir l'étape ➔</span>
+                        </a>
+                        <a href="#" class="journal-card">
+                            <span class="journal-day">Jour 3</span>
+                            <h4>L'Orage Volcanique</h4>
+                            <span class="journal-link">Voir l'étape ➔</span>
                         </a>
                     </div>
                 </div>
@@ -146,11 +151,13 @@
 
     <!-- SECTION 4 : DESTINATION -->
     <section id="destination" class="pink-section">
-        <div class="split-section fade-up">
+        <div class="split-section">
             <div class="split-text">
-                <h2>De la méditation solitaire à la célébration collective.</h2>
-                <p>L'objectif final : passer les grilles du festival We Out Here dans le Dorset. Vingt jours de silence, de transe sur les pédales, comme une longue préparation mentale.</p>
-                <p>Et à l'arrivée ? Chercher les potes. Prendre la douche de ma vie. Et ressentir la fierté viscérale de l'objectif accompli avant que la musique ne commence.</p>
+                <h2>Des kilomètres solitaires à la célébration collective.</h2>
+                <p>L'objectif ultime ? Passer les portes de We Out Here. Après 20 jours de solitude, de poussière et de jambes lourdes, il n'y a pas de meilleure récompense que de planter la tente une dernière fois, de poser les sacoches et de rejoindre la communauté pour quatre jours de musique exceptionnelle.</p>
+                <div style="margin-top: 1.5rem;">
+                    <a href="https://weoutherefestival.com/" target="_blank" class="cta-button" style="border-color: #050505; color: #050505;">Rendez-vous dans les bois</a>
+                </div>
             </div>
             <div class="split-image">
                 <div class="placeholder-img">Espace Image :<br>Ambiance Festival We Out Here</div>
@@ -158,31 +165,15 @@
         </div>
     </section>
 
-    <!-- SECTION 5 : DEV NOMADE -->
-    <section id="author" class="container">
-        <div class="author-card fade-up">
-            <div class="author-img">
-                <div class="placeholder-img">Espace Image :<br>Portrait Ludovic Bourgoin</div>
-            </div>
-            <div class="author-bio">
-                <h2>Code le matin.<br>Pédale l'après-midi.</h2>
-                <p>Développeur freelance de jour, cycliste de cœur. Ce voyage, c'est aussi ma vision du travail en 2026 : déconnecté géographiquement, mais hyper-connecté à l'essentiel.</p>
-                <p>Même si soyons honnêtes : le setup IDE dans le Cantal finira sûrement par un livre sous un arbre pour vider la tête.</p>
-                <div style="margin-top: 1rem;">
-                    <a href="mailto:contact@example.com" class="cta-button">Discutons de votre projet Web</a>
-                </div>
-            </div>
-        </div>
-    </section>
-
     <!-- SECTION 6 : FOOTER -->
     <footer>
-        <h2 class="fade-up">Ne ratez pas la prochaine crevaison.</h2>
-        <div class="newsletter fade-up">
+        <h2 class="">Ne ratez pas la prochaine crevaison.</h2>
+        <p class="" style="margin-bottom: 2rem; color: var(--text-dim); text-align: center;">Laissez votre e-mail pour suivre le voyage, les pannes inévitables et l'arrivée finale dans le Dorset.</p>
+        <div class="newsletter">
             <input type="email" placeholder="Votre adresse email...">
-            <button class="cta-button">S'abonner</button>
+            <button class="cta-button">Me tenir informé</button>
         </div>
-        <div class="footer-links fade-up">
+        <div class="footer-links">
             <a href="https://strava.com/">Strava</a>
             <a href="https://www.komoot.com/fr-fr/collection/4285961">Komoot</a>
             <a href="https://www.polarsteps.com/LudovicBourgoin/25395523-ride-out-here">Polarsteps</a>
